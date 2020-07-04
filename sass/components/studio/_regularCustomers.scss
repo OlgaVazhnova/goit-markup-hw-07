@@ -1,0 +1,39 @@
+.section-clients.list {
+  display: flex;
+}
+.section-clients .item {
+  @extend %flexCenter;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border-color 250ms $cubic, cursor 250ms $cubic;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+}
+
+.item-link {
+  display: block;
+}
+
+.item-link-icon {
+  fill: #afb1b8;
+
+  transition: fill 250ms $cubic;
+
+  .section-clients .item:hover &,
+  .section-clients .item:focus & {
+    fill: $accent-color;
+  }
+}
